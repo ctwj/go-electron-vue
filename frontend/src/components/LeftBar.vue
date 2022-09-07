@@ -8,7 +8,7 @@
         class="logo vue"
         alt="Vue logo"
       />
-      <div class="leftbar-header-menu">
+      <div class="leftbar-header-menu" style="-webkit-app-region: no-drag">
         <router-link
           v-for="menu in menuList"
           :key="menu.label"
@@ -25,7 +25,7 @@
     </el-space>
 
     <!-- 底部退出按钮 -->
-    <div class="leftbar-footer">
+    <div class="leftbar-footer" style="-webkit-app-region: no-drag">
       <el-popover placement="right-end" trigger="hover">
         <template #reference>
           <el-icon :size="24" color="white">
