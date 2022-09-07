@@ -10,7 +10,8 @@ import (
 
 	"github.com/asticode/go-astikit"
 	"github.com/asticode/go-astilectron"
-	bootstrap "github.com/asticode/go-astilectron-bootstrap"
+
+	bootstrap "github.com/ctwj/go-electron-vue/bootstrap"
 )
 
 // Constants
@@ -93,10 +94,24 @@ func main() {
 			MessageHandler: handleMessages,
 			Options: &astilectron.WindowOptions{
 				BackgroundColor: astikit.StrPtr("#333"),
-				Center:          astikit.BoolPtr(true),
-				Resizable:       astikit.BoolPtr(false),
-				Height:          astikit.IntPtr(700),
-				Width:           astikit.IntPtr(700),
+
+				// 打开时居中
+				Center: astikit.BoolPtr(true),
+
+				// 禁止改变窗口大小
+				Resizable: astikit.BoolPtr(true),
+
+				// 窗口大小
+				Height: astikit.IntPtr(600),
+				Width:  astikit.IntPtr(800),
+
+				// 无边框窗口
+				Frame:       astikit.BoolPtr(false),
+				Transparent: astikit.BoolPtr(true),
+
+				WebPreferences: &astilectron.WebPreferences{
+					NodeIntegrationInWorker: astikit.BoolPtr(false),
+				},
 			},
 		}},
 	}); err != nil {

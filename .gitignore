@@ -4,3 +4,4 @@ resources/app/
 vue/node_modules/
 windows.syso
 debug.log
+.DS_Store
