@@ -3,7 +3,7 @@ module github.com/ctwj/go-electron-vue
 go 1.17
 
 require (
-	github.com/asticode/go-astikit v0.29.1
+	github.com/asticode/go-astikit v0.30.0
 	github.com/asticode/go-astilectron v0.29.0
 	github.com/asticode/go-astilectron-bundler v0.7.12
 )
