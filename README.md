@@ -53,6 +53,8 @@ npm run build
 cd ..
 astilectron-bundler
 ```
+打包过程需要下载electron 和 astilectron 的文件， 如果下载不回来， 
+直接在 cache_file 文件夹中，找到文件，放置到对应目录即可。
 
 ### 开启调试 
 程序启动后，按`ctrl+d` 打开electron开发者工具
